@@ -61,16 +61,19 @@ Monitoring biodiversity at scale requires processing vast amounts of unstructure
 * **Administrator:** *"I want to manage user permissions and monitor database health."*
 
 #### System Workflow Analysis
-[Field Sensors ] ──► (Camera Traps / Audio Recorders)
-│
-▼
-[ Ingestion Layer ] ──► POST /api/v1/sensor/log ──► Store Raw Payload in MongoDB
-│
-▼
-[ AI Inference Engine ] ──► Vision (ResNet50/YOLOv8) + Audio (Mel-Spectrogram CNN)
-│
-▼
-[ Relational Storage ] ──► Link Predictions + GPS Coordinates ──► PostgreSQL Survey Record
-│
-▼
-[ Intelligence Dashboard ] ──► Interactive Heatmaps & Conservation Reports
+```text
+[ Field Sensors ] ─────────► (Camera Traps / Audio Recorders)
+       │
+       ▼
+[ Ingestion Layer ] ───────► POST /api/v1/sensor/log ──► Store Raw Payload in MongoDB
+       │
+       ▼
+[ AI Inference Engine ] ───► Vision (ResNet50/YOLOv8) + Audio (Mel-Spectrogram CNN)
+       │
+       ▼
+[ Relational Storage ] ────► Link Predictions + GPS Coordinates ──► PostgreSQL Survey Record
+       │
+       ▼
+[ Intelligence Dashboard ] ─► Interactive Heatmaps & Conservation Reports
+
+
